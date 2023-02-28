@@ -113,3 +113,12 @@ if [ -f /usr/local/etc/bash_completion ]; then source /usr/local/etc/bash_comple
 if [ -f "$HOME/.bashrc.local" ]; then
   source "$HOME/.bashrc.local"
 fi
+
+export KUBERNETES_CLI_PATH=/Users/hankchoi/.n2c
+export PATH=$KUBERNETES_CLI_PATH:$PATH
+export N2C_CLI_PATH=/Users/hankchoi/.n2c
+export PATH=$N2C_CLI_PATH:$PATH
+export HELM_PATH=/Users/hankchoi/.n2c
+export PATH=$HELM_PATH:$PATH
+export DOCKER_PATH=/Users/hankchoi/.n2c
+export PATH=$DOCKER_PATH:$PATH

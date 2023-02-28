@@ -34,3 +34,6 @@ unset CONDA_PYTHON_EXE
 unset CONDA_SHLVL
 
 # vim: set ft=zsh ts=2 sts=2 sw=2:
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
