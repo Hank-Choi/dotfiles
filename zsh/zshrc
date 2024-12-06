@@ -278,6 +278,9 @@ export PATH=$N2C_CLI_PATH:$PATH
 export HELM_PATH=/Users/hankchoi/.n2c
 export PATH=$HELM_PATH:$PATH
 
+export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
+export DOCKER_HOST="unix://${HOME}/.colima/docker.sock"
+
 eval "$(jenv init -)"
 export PATH="$HOME/.jenv/bin:$PATH"
 export PATH="/opt/homebrew/opt/mongodb-community@4.4/bin:$PATH"
@@ -288,3 +291,4 @@ alias vtctlclient='kubectl exec -i $(kubectl get pod -lplanetscale.com/component
 alias vtmysql='kubectl exec -i $(kubectl get pod -lplanetscale.com/component=vtctld --output=jsonpath={.items[0].metadata.name}) -- mysql -h $(kubectl get services -lplanetscale.com/cluster=vitess,planetscale.com/component=vtgate,\!planetscale.com/cell --output=jsonpath={..loadBalancer.ingress[].ip})'
 # mysql interactive 모드용
 alias vtmysqlsh='kubectl exec -it $(kubectl get pod -lplanetscale.com/component=vtctld --output=jsonpath={.items[0].metadata.name}) -- mysql -h $(kubectl get services -lplanetscale.com/cluster=vitess,planetscale.com/component=vtgate,\!planetscale.com/cell --output=jsonpath={..loadBalancer.ingress[].ip})'
+export PATH="$HOME/c3s-hdfs-connector-0.8/bin:$PATH"
